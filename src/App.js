@@ -15,7 +15,7 @@ const reducer = combineReducers(reducers);
 const store = createStoreWithMiddleware(reducer);
 registerScreens(store, Provider);
 
-export default class  App extends Component {
+export default class App extends Component {
 
   constructor(props) {
     super(props);
