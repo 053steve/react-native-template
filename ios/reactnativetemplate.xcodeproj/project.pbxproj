@@ -37,8 +37,8 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		AAE7F7532084BBD3007CD205 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE7F7522084BBC0007CD205 /* libReactNativeNavigation.a */; };
+		AAE7F8372087AB5C007CD205 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE7F7BE208665CE007CD205 /* libRNCamera.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		E4017543F1324DB7B4FACCC7 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1C911CD9B4F4B59AB622673 /* libRNCamera.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -377,8 +377,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE7F8372087AB5C007CD205 /* libRNCamera.a in Frameworks */,
 				AAE7F7532084BBD3007CD205 /* libReactNativeNavigation.a in Frameworks */,
-				E4017543F1324DB7B4FACCC7 /* libRNCamera.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,

@@ -36,40 +36,51 @@ export default class App extends Component {
     
   startApp(root) {
     switch (root) {
-        case 'login':
-          Navigation.startSingleScreenApp({
-                    screen: {
-                    screen: 'ReactNativeReduxExample.Login', // unique ID registered with Navigation.registerScreen
-                    title: 'Welcome', // title of the screen as appears in the nav bar (optional)
+        case 'camera':
+            Navigation.startSingleScreenApp({
+                screen: {
+                    screen: 'ReactNativeReduxExample.Camera', // unique ID registered with Navigation.registerScreen
+                    title: 'Camera Test', // title of the screen as appears in the nav bar (optional)
                     navigatorStyle: {}, // override the navigator style for the screen, see "Styling the navigator" below (optional)
                     navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
-                    },
-                });
-                return;
+                },
+            })
+            return;
+          
+        case 'login':
+            Navigation.startSingleScreenApp({
+                screen: {
+                screen: 'ReactNativeReduxExample.Login', // unique ID registered with Navigation.registerScreen
+                title: 'Welcome', // title of the screen as appears in the nav bar (optional)
+                navigatorStyle: {}, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+                navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
+                },
+            });
+            return;
               
         case 'after-login':
             Navigation.startTabBasedApp({
                 tabs: [
-                {
-                    label: 'Home',
-                    screen: 'ReactNativeReduxExample.HomeTab',
-                    icon: require('./img/checkmark.png'),
-                    selectedIcon: require('./img/checkmark.png'),
-                    title: 'Hey',
-                    overrideBackPress: false,
-                    navigatorStyle: {}
-                },
+                    {
+                        label: 'Home',
+                        screen: 'ReactNativeReduxExample.HomeTab',
+                        icon: require('./img/checkmark.png'),
+                        selectedIcon: require('./img/checkmark.png'),
+                        title: 'Hey',
+                        overrideBackPress: false,
+                        navigatorStyle: {}
+                    },
 
-                {
-                    label: 'Search',
-                    screen: 'ReactNativeReduxExample.SearchTab',
-                    icon: require('./img/checkmark.png'),
-                    selectedIcon: require('./img/checkmark.png'),
-                    title: 'Hey',
-                    navigatorStyle: {}
+                    {
+                        label: 'Search',
+                        screen: 'ReactNativeReduxExample.SearchTab',
+                        icon: require('./img/checkmark.png'),
+                        selectedIcon: require('./img/checkmark.png'),
+                        title: 'Hey',
+                        navigatorStyle: {}
 
-                    
-                }
+                        
+                    }
                
                 ],
             });
