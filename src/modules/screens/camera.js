@@ -12,10 +12,23 @@ import {
 
 
 export default class Camera extends Component {
+  constructor(props) {
+      super(props)
+      this.state = {
+          barcode: ''
+      }
+  }
+
+  onBarCodeRead = (data) => {
+    console.log('on bar code read')
+    console.log(data)
+  }
+
   render() {
     return (
       
       <View style={styles.container}>
+        
         <RNCamera
             ref={ref => {
               this.camera = ref;
@@ -25,6 +38,8 @@ export default class Camera extends Component {
             flashMode={RNCamera.Constants.FlashMode.on}
             permissionDialogTitle={'Permission to use camera'}
             permissionDialogMessage={'We need your permission to use your camera phone'}
+            barCodeTypes={[RNCamera.Constants.BarCodeType.code128]}
+            onBarCodeRead={this.onBarCodeRead}
         />        
       </View>
     );

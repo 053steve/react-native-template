@@ -12,6 +12,8 @@ import * as  appActions from '../../actions/index';
 
 export default class Hometab extends Component {
 
+  
+
   render() {
     return (
       <View style={styles.container}>
