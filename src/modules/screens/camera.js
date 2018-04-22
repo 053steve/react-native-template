@@ -4,10 +4,11 @@ import {
     StyleSheet,
     Text,
     TouchableOpacity,
-    View
+    View,
+    Alert
   } from 'react-native';
 
-  import { RNCamera } from 'react-native-camera';
+import { RNCamera } from 'react-native-camera';
 
 
 
@@ -19,9 +20,20 @@ export default class Camera extends Component {
       }
   }
 
-  onBarCodeRead = (data) => {
-    console.log('on bar code read')
-    console.log(data)
+  onBarCodeRead = (data) => {    
+    if(!this.state.barcode) {
+      
+      Alert.alert(
+        'Alert Title',
+        data.data,
+        [
+          {text: 'Ok', onPress: () => console.log('Ok Presses')}        
+        ],
+        { cancelable: false }
+      );
+      
+      this.setState({barcode: data});
+    }        
   }
 
   render() {
